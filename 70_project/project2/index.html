@@ -42,25 +42,25 @@
             <p><b>John Doe</b></p>
             <p>CEO & Founder</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a href="#">Contact</a>
+            <input type="button" value="Contact">
         </li>
         <li><img src="images/Jane.jpg" alt="Jane">
             <p><b>Jane Doe</b></p>
             <p>Architect</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a href="#">Contact</a>
+            <input type="button" value="Contact">
         </li>
         <li><img src="images/Mike.jpg" alt="Mike">
             <p><b>Mike Ross</b></p>
             <p>Architect</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a href="#">Contact</a>
+            <input type="button" value="Contact">
         </li>
         <li><img src="images/Dan.jpg" alt="Dan">
             <p><b>Dan Star</b></p>
             <p>Architect</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-            <a href="#">Contact</a>
+            <input type="button" value="Contact">
         </li>
     </ul> 
 
@@ -68,11 +68,18 @@
     <!-- 섹션4 -->
     <h2 id="contact">Contact</h2>
     <p>Lets get in touch and talk about your next project.</p>
-    <a href="#">SEND MESSAGE</a>
+    <form action="message.php" method="post">
+        <input type="text" name="user_name" placeholder="Name" required>
+        <input type="email" name="user_email" placeholder="Email" required>
+        <input type="text" name="user_subject" placeholder="Subject" required>
+        <input type="text" name="user_comment" placeholder="Comment" required>
+        <button type="submit"></i>SEND MESSAGE</button>
+    </form>
     <img src="images/map.jpg" alt="map">
 
 
     <!-- 푸터 -->
+    
 
 </body>
 </html>
