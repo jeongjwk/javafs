@@ -1,25 +1,31 @@
 @charset "utf-8";
+
 /* reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     color: #000;
     background: #fff;
 }
+
 a {
     color: #000;
 }
+
 /* 목록의 마커 제거 */
-li{
+li {
     list-style: none;
 }
-
+img {
+    border: 1px solid #000000;
+}
 /* header */
 header {
-    border: 1px solid black;
+    border: 1px solid #000000;
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -27,84 +33,110 @@ header {
     height: 54px;
     padding: 0 32px;
     background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.16), 0 2px 10px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
 }
+
 .logo {
-    float: left;
+    display: flex;
+    justify-content: flex-start;
 }
+
 nav {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -32px;
 }
+
+
 nav li {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 0 16px;
 }
 
 /* section common */
-section{
+section {
     width: 1496px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    padding-bottom: 32px;
+    outline: 1px solid #000000
 }
+
 .section {
     padding-top: 81px;
 }
+
 .section h2 {
     margin-bottom: 16px;
     padding-bottom: 16px;
     border-bottom: 1px solid #ccc;
 }
-.section h2 + p {
+
+.section h2+p {
     margin-bottom: 32px;
 }
 
 /* section1 */
 #home {
-    position: relative;
+    position: relative;  
 }
-#home h2{
+
+#home h2 {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-    background: #555;
+    transform: translate(-50%, -50%);
     padding: 8px 24px;
 }
+#home b {
+    background: #000000;
+    color: #fff;
+    padding: 8px 16px;
+}
+
 /* section2,3 common */
-#products li, #related li {
+#products li,
+#related li {
     float: left;
     width: 362px;
 }
-#products ul::after, #related ul::after {
+
+#products ul::after,
+#related ul::after {
     content: '';
     clear: both;
     display: block;
 }
 
-#products li:not(:nth-of-type(4n)), #related li:not(:nth-of-type(4n)){
+#products li:not(:nth-of-type(4n)),
+#related li:not(:nth-of-type(4n)) {
     margin-right: 16px;
 }
 
 
 /* section2 */
-#products h2{
+#products h2 {
     margin-bottom: 48px;
 }
-#products li  h3{
+
+#products li h3 {
     position: absolute;
     background: #000;
-    color:#fff;
+    color: #fff;
     padding: 8px 16px;
 }
+
 /* section3 */
 #related li h3 {
     margin: 16px 0 8px;
 }
+
 #related li p {
     margin: 8px 0;
 }
+
 #related li button {
     display: block;
-    width:100%;
+    width: 100%;
     background: #ccc;
     text-align: center;
     padding: 8px 0;
@@ -119,17 +151,19 @@ section{
     width: 100%;
     margin-bottom: 16px;
 }
-#contact form button{
+
+#contact form button {
     background: #000;
-    color:#fff;
+    color: #fff;
     padding: 8px 16px;
     margin: 16px 0;
 }
+
 /* footer */
 footer {
     height: 81px;
     background: #000;
-    color:#fff;
+    color: #fff;
     text-align: center;
     padding: 32px 0;
 }
