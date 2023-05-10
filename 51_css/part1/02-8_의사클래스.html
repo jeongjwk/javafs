@@ -7,12 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML+CSS</title>
     <style>
-        /* p가 타깃되었을 때 */
-        /* input의 라디오 버튼이 체크되었을 때 */
-        /* h2의 3번째 자손 중 h2와 p를 제외하고 */
 
+        /* 
+            가상(유사, 슈도, 의사) 클래스 선택자
+            :link, :visited, :hover, :active
+            :nth-child(), :nth-of-type(),...
+            :not()
+
+            :target
+            :checked
+        */
+        
+        /* p가 타깃되었을 때 */
+        :target {
+            background: lightgreen;
+        }
+        /* input의 라디오 버튼이 체크되었을 때 */
+        input {
+            display: none;
+        }
+
+        :checked + p {
+            background: lightgreen;
+        }
+        /* h2의 3번째 자손 중 h2와 p를 제외하고 */
+        h2:nth-of-type(3) ~ :not(h2, p) {
+            background: lightblue;
+        } 
         /* 아래 내용을 확인한 후 지우고 지정해 보세요. */
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+/*        
+       
         p:target {
             background: yellow;
         }
@@ -29,7 +63,7 @@
 
         h2:nth-of-type(3) ~ :not(h2, p) {
             background: lightblue;
-        }
+        } */
 
     </style>
 </head>
