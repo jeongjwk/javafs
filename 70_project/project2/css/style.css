@@ -42,6 +42,21 @@ nav li {
     margin: 16px;
     padding: 0 16px;
 }
+a:hover {
+    color: #fc1212;
+}
+.menu a::after {
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fc1212;
+    transition: .3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
 
 /* section common */
 section {
@@ -118,7 +133,9 @@ ul {
 #products h2 {
     margin-bottom: 48px;
 }
-
+#products li img:hover{
+    transform: scale(1.2);
+}
 #products li h3 {
     position: absolute;
     background: #000;
@@ -145,6 +162,10 @@ ul {
     cursor: pointer;
 }
 
+#related li button:hover{
+    background: #acabab;
+}
+
 /* section4 */
 #contact form input {
     display: flex;
@@ -161,6 +182,10 @@ ul {
     margin: 16px 0;
     cursor: pointer;
 }
+#contact form button:hover {
+    background: #fff;
+    color: #000;
+}
 
 /* footer */
 footer {
@@ -171,7 +196,10 @@ footer {
     padding: 32px 0;
 }
 
-.map {
+#map {
+    margin: 24px 0px;
+}
+#map iframe{
     width: 1496px;
     height: 848px;
 }
