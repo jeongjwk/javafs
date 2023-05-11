@@ -1,8 +1,52 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Open+Sans:wght@300&display=swap');
-@import url('typo.css');
-@import url('reset.css');
+/* 외부 폰트 */
+@font-face {
+    font-family: 'Ansungtangmyun-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/Ansungtangmyun-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ansungtangmyun-Bold';
+}
+
+html {
+    font-style: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+}
+
+
+body {
+    color: #111;
+    font-style: 1.5rem;
+    line-height: 1.8;
+}
+
+h1 {
+    font-style: 3.2rem;
+}
+
+h2 {
+    font-style: 2.4rem;
+}
+
+h3 {
+    font-style: 1.8rem;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+}
 
 
 /* 목록의 마커 제거 */
@@ -42,11 +86,13 @@ nav li {
     margin: 16px;
     padding: 0 16px;
 }
+
 a:hover {
     color: #fc1212;
 }
+
 .menu a::after {
-    content:'';
+    content: '';
     display: block;
     width: 0;
     height: 2px;
@@ -83,10 +129,12 @@ section {
 #home {
     position: relative;
 }
+
 #home img {
     height: 800px;
     width: 1500px;
 }
+
 #home h2 {
     color: #ffffff;
     position: absolute;
@@ -101,6 +149,10 @@ section {
     color: #ff0000;
     padding: 8px 16px;
     border-radius: 50%;
+}
+
+.intro li {
+    border-top: 3px solid red;
 }
 
 /* section2,3 common */
@@ -133,9 +185,11 @@ ul {
 #products h2 {
     margin-bottom: 48px;
 }
-#products li img:hover{
+
+#products li img:hover {
     transform: scale(1.2);
 }
+
 #products li h3 {
     position: absolute;
     background: #000;
@@ -162,7 +216,7 @@ ul {
     cursor: pointer;
 }
 
-#related li button:hover{
+#related li button:hover {
     background: #acabab;
 }
 
@@ -182,6 +236,7 @@ ul {
     margin: 16px 0;
     cursor: pointer;
 }
+
 #contact form button:hover {
     background: #fff;
     color: #000;
@@ -196,10 +251,22 @@ footer {
     padding: 32px 0;
 }
 
+footer a {
+    float: right;
+    margin: -15px 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 #map {
     margin: 24px 0px;
 }
-#map iframe{
+
+#map iframe {
     width: 1496px;
     height: 848px;
 }
