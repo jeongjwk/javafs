@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
 
 /* ctrl+f: 찾기 */
 
@@ -8,10 +9,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 10px;
+}
+li {
+    list-style: none;
+}
 img {
     width: 100%;
 }
-
+body {
+    font: 1.5rem/1.8 'Noto Sans KR', sans-serif;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #777;
+}
 /* 공통 */
 #wrap {
     /* 가로 가운데 맞춤 */
@@ -23,23 +37,39 @@ header, #contents, footer {
 }
 
 /* 헤더 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
 /* 로고 */
 .logo {
     width: 200px;
-    height: 100px;
-    background: lightgoldenrodyellow;
+    background: #fafad2;
 }
 /* 내비게이션 */
-nav {
-    width: 1000px;
-    height: 100px;
-    background: purple;
+nav .main {
+    display: flex;
 }
-
+nav li {
+    width: 150px;
+    margin-left: 8px;
+    text-align: center;
+    background: #800080;
+}
+nav .main > li > a {
+    font-size: 1.8rem;
+    color: #fff;
+}
+nav .sub {
+    display: none;
+}
 /* 슬라이드 */
 #slide {
     height: 300px;
-    background: lightcoral;
+    background: #f08080;
     overflow:hidden
 }
 #slide ul {
@@ -66,17 +96,66 @@ nav {
 }
 
 /* 메인 컨텐츠 */
-
-#contents div {
+#contents > div {
     width: 400px;
     height: 200px;
 }
+/* 탭 메뉴 */
 .tabs {
-    background: gold;
+    padding: 24px 24px 24px 0;
+    background-clip: content-box;
 }
+.tabs input, .tabs > div {
+    display: none;
+}
+
+#btn1:checked ~ #tab1, #btn2:checked ~ #tab2 {
+    display: block;
+}
+/* 탭 메뉴 - 제목/버튼 */
+.tabs label {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 4px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+#btn1:checked + label, #btn2:checked + label {
+    color: red;
+    font-weight: 500;
+}
+
+/* 탭 메뉴 - 공지사항 */
+#tab1 li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ccc;
+}
+#tab1 a {
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* 말줄임 ...효과 */
+    text-overflow: ellipsis;
+}
+#tab1 a:hover {
+    color: #333;
+}
+/* 탭 메뉴 - 앨범 */
+#tab2 a {
+    display: inline-block;
+    width: 110px;
+    margin-right: 13px;
+}
+
+/* 배너 */
 .banner{
     background: rgb(87, 72, 156);
 }
+/* 바로가기 */
 .shortcut{
     background: rgb(221, 35, 35);
 }

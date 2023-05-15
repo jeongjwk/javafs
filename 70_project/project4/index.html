@@ -28,9 +28,9 @@
                         <a href="#">차트</a>
                         <ul class="sub">
                             <li><a href="#">오늘 Top 100 </a></li>
-                            <li><a href="#">국내 급상승 🔥</a></li>
-                            <li><a href="#">해외 급상승 🔥</a></li>
                             <li><a href="#">billboard HOT 100</a></li>
+                            <li><a href="#">VIBE 노래방 Top 100 </a></li>
+                            <li><a href="#">뮤직비디오 Top 50</a></li>
                         </ul>
                     </li>
                     <li>
@@ -70,23 +70,36 @@
         <!-- main contents -->
         <div id="contents">
             <div class="tabs">
-                <div>
+                <!-- 제목/버튼 -->
+                <input type="radio" name="tabs" id="btn1" checked>
+                <label for="btn1">공지사항</label>
+                <input type="radio" name="tabs" id="btn2">
+                <label for="btn2">앨범</label>
+
+                <!-- 공지사항 -->
+                <div id="tab1">
                     <ul>
-                        <li><a href="#">'무제한 듣기 + 스마트폰 DRM 저장' 멤버십 종료 및..</a></li>
-                        <li><a href="#">VIBE 일부 할인상품 할인율 변경 안내</a></li>
-                        <li><a href="#">VIBE Web Internet Explorer 브라우저 지원 종료 안내 </a></li>
-                        <li><a href="#">VIBE iOS 최소 지원버전 상향 안내</a></li>
+                        <li><a href="#">VIBE '무제한 듣기 + 스마트폰 DRM 저장' 멤버십 종료</a><span>2023-05-15</span></li>
+                        <li><a href="#">VIBE 일부 할인상품 할인율 변경 안내</a><span>2023-04-30</span></li>
+                        <li><a href="#">Web Internet Explorer 브라우저 지원 종료 안내 </a><span>2023-03-04</span></li>
+                        <li><a href="#">VIBE iOS 최소 지원버전 상향 안내</a><span>2023-01-21</span></li>
                     </ul>    
                 </div>
-                <div>
-                    <a href="#"><img src="images/i1.jpg" alt="모자"></a>
-                    <a href="#"><img src="images/i2.jpg" alt="클러치백"></a>
-                    <a href="#"><img src="images/i3.jpg" alt="장갑"></a>
+
+                <!-- 앨범 -->
+                <div id="tab2">
+                        <a href="#"><img src="images/i1.jpg" alt="모자"></a>
+                        <a href="#"><img src="images/i2.jpg" alt="클러치백"></a>
+                        <a href="#"><img src="images/i3.jpg" alt="장갑"></a>
+                    </ul>
                 </div>
             </div>
+
+            <!-- 배너 -->
             <div class="banner">
                 <img src="images/banner.jpg" alt="Dress 1+1 보러가기">
             </div>
+            <!-- 바로가기 -->
             <div class="shortcut">
                 <img src="images/quick.jpg" alt="모바일 앱 설치">
             </div>
