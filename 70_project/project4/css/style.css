@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 /* ctrl+f: 찾기 */
 
@@ -32,9 +33,6 @@ a{
     width: 1200px;
     margin: 0 auto
 }
-header, #contents, footer {
-    display: flex;
-}
 
 /* 헤더 */
 header {
@@ -47,7 +45,6 @@ header {
 /* 로고 */
 .logo {
     width: 200px;
-    background: #fafad2;
 }
 /* 내비게이션 */
 nav .main {
@@ -70,7 +67,7 @@ nav .sub {
 #slide {
     height: 300px;
     background: #f08080;
-    overflow:hidden
+    overflow: hidden;
 }
 #slide ul {
     position: relative;
@@ -96,6 +93,11 @@ nav .sub {
 }
 
 /* 메인 컨텐츠 */
+#contents {
+    display: flex;
+    padding: 8px 0;
+}
+
 #contents > div {
     width: 400px;
     height: 200px;
@@ -160,20 +162,43 @@ nav .sub {
     background: rgb(221, 35, 35);
 }
 /* 푸터 */
-
-
-.b_logo {
-    width: 200px;
-    height: 100px;
-    background: firebrick;
+footer {
+    display: flex;
+    color: #fff; 
+    padding-left: 350px; 
+    background: #777 url('../images/logo2.png') no-repeat 260px 50%/60px;
 }
+
+
 .addr {
-    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
     height: 100px;
-    background: blueviolet;
 }
 .sns {
-    width: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    /* flex: glow shrink basis */
+    flex: 0 0 200px;
     height: 100px;
-    background: aquamarine;
+}
+.sns a {
+    color: #999;
+    margin: 0 8px;
+    transition: .3s;
+}
+.sns a:nth-of-type(1):hover {
+    transform: scale(1.2,1.2);
+    color: #395498;
+}
+.sns a:nth-of-type(2):hover {
+    transform: scale(1.2,1.2);
+    color: #f60065;
+}
+.sns a:nth-of-type(3):hover {
+    transform: scale(1.2,1.2);
+    color: #41c91f;
 }
