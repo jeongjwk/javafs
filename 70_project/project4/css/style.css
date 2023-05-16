@@ -31,7 +31,7 @@ a{
 #wrap {
     /* 가로 가운데 맞춤 */
     width: 1200px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 /* 헤더 */
