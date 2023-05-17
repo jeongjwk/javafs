@@ -81,6 +81,7 @@ section h2 + p {
 .profile {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .profile p {
     text-align: justify;
