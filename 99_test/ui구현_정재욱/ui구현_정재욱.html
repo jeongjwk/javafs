@@ -36,7 +36,10 @@
         /* header */
         header {
             border: 1px solid #000000;
-            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             top: 0;
             z-index: 9999;
             width: 100%;
@@ -47,17 +50,10 @@
         }
 
         /* 로고 */
-        .logo {
-            display: flex;
-            justify-content: flex-start;
-        }
+       
        
         /* 내비게이션 */
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: -32px;
-        }
+        
 
 
         nav li {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>농심</title>
+    <title>농심_정재욱</title>
     <style>
         /* reset */
         * {
@@ -29,17 +29,17 @@
         }
 
         img {
+            vertical-align: top;
             border: 1px solid #000000;
         }
 
         /* header */
         header {
+            border: 1px solid #000000;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            border: 1px solid #000000;
-            position: fixed;
             top: 0;
             z-index: 9999;
             width: 100%;
@@ -49,7 +49,12 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
         }
 
-     
+        /* 로고 */
+       
+       
+        /* 내비게이션 */
+        
+
 
         nav li {
             display: inline-block;
@@ -100,8 +105,8 @@
         /* section2,3 common */
         #products li,
         #related li {
-            float: left;
             width: 362px;
+            margin-bottom: 16px;
         }
 
         #products ul::after,
@@ -122,14 +127,30 @@
             margin-bottom: 48px;
         }
 
+        #products ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #products li {
+            position: relative;
+        }
+
         #products li h3 {
             position: absolute;
             background: #000;
             color: #fff;
-            padding: 8px 16px;
+            /* padding: 8px 16px; */
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
         }
 
         /* section3 */
+        #related ul {
+            display: flex;
+        }
         #related li h3 {
             margin: 16px 0 8px;
         }
@@ -289,7 +310,7 @@
             <input type="email" name="user_email" placeholder="Email" required>
             <input type="text" name="user_subject" placeholder="Subject" required>
             <input type="text" name="user_comment" placeholder="Comment" required>
-            <button type="submit"></i>SEND MESSAGE</button>
+            <button type="submit">SEND MESSAGE</button>
         </form>
         <img src="https://dummyimage.com/1496x837&text=+" alt="NS NongShim Map">
     </section>
