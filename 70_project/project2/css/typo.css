@@ -32,13 +32,15 @@ h2 {
 h3 {
     font-size: 1.8rem;
 }
-
+#products h3{
+    color: #fff;
+}
 a {
     color: #111;
     text-decoration: none;
 }
 a:hover {
-    color: #1100ff;
+    color: #ff0000;
 }
 button {
     color: #fff;
@@ -49,7 +51,7 @@ button {
 .main_tit {
     font-size: 3.6rem;
     letter-spacing: 4px;
-    color: #fff;
+    color: #dd2222;
 }
 
 /* 헤더 */
@@ -58,7 +60,7 @@ button {
     display: block;
     width: 0;
     height: 2px;
-    background: #1100ff;
+    background: #ff0000;
     transition: .3s;
 }
 

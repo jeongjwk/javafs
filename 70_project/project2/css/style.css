@@ -20,7 +20,7 @@ nav {
 }
 
 #home {
-    position:relative;
+    position: relative;
 }
 #home h2 {
     position: absolute;
@@ -91,23 +91,26 @@ nav {
     margin: 20px 0 45px;
     background: #000;
 }
+#contact .map {
+    height: 185px;
+}
 /* 푸터 */
 footer {
     background: #000;
     text-align: center;
+    margin-top: 8px;
     padding: 30px 0;
 }
 footer span:nth-of-type(1), footer span:nth-of-type(3) {
     display: none;
 }
-/* 992 이상 */
-@media (min-width: 992px) {
+/* 600이상 */
+@media (min-width: 600px) {
     /* 헤더 */
     header {
         display: flex;
         justify-content: space-between;
     }
-    /* 로고 */
     /* 내비게이션 */
     nav {
         display: block;
@@ -118,29 +121,24 @@ footer span:nth-of-type(1), footer span:nth-of-type(3) {
     nav ul li:not(:first-of-type) {
         margin-left: 36px;
     }
-    /* 섹션1 */
-    #home {
-        min-width: 1496px;
-        margin: 0 auto;
+    /* 메인 타이틀 */
+    #home .main_tit {
+        white-space: nowrap;
+    }
+    #home span {
+        display: inline-block;
+        margin-left: 16px;
+        text-shadow: 1px 1px 5px #000;
     }
     /* 섹션2~4 공통 */
-    .section {
-        width: 1496px;
-        margin: 0 auto;
-        padding: 81px 0px 0;
-    }
-    
     .section ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     .section li {
-        width: 362px;
-
+       width: calc(50% - 8px);
     }
-    /* 섹션2 */
-    /* 섹션3 */
     #related li {
         display: flex;
         flex-direction: column;
@@ -150,6 +148,43 @@ footer span:nth-of-type(1), footer span:nth-of-type(3) {
         height: 200px;
     }
     /* 섹션4 */
-    /* 푸터 */
+    #contact .map {
+        height: 400px;
+    }
+}
+/* 992 이상 */
+@media (min-width: 992px) {
+    /* 섹션1 */
+    #home {
+        max-width: 1496px;
+        margin: 0 auto;
+    }
+    /* 섹션2~4 공통 */
+    .section {
+        max-width: 1496px;
+        margin: 0 auto;
+        padding: 81px 30px 0;
+    }
     
+    .section li {
+        width: calc(25% - 8px);
+    }
+    
+    /* 섹션4 */
+    #contact .map {
+        height: 845px;
+    }
+    /* 푸터 */
+    footer span:nth-of-type(1), footer span:nth-of-type(3) {
+        display: inline-block;
+    }
+    footer span:nth-of-type(2) {
+        display: none;
+    }
+}
+
+@media (min-width: 1573px) {
+    .section {
+        padding: 81px 0px 0;
+    }
 }
