@@ -14,14 +14,24 @@
         /* 
             toUpperCase(): 대문자로 반환
             toLowerCase(): 소문자로 반환
+            
             charCodeAt(index): 인덱스 번호에 해당하는 문자열의 아스키코드 값을 반환 (인덱스를 생략하면 0)
             fromCharCode(아스키코드값): 아스키코드 값에 해당하는 문자열 반환
-            length: 문자열의 문자 총 개수 반환
+            
+            length: 문자열의 문자 총 개수 반환 (중요)
         */
 
         var str = 'Hello Thank you good luck to you';
 
+        let str2 = str.toUpperCase();
+        document.write(str2 ,'<br>');
+        document.write(str2.toLowerCase(), '<br>');
 
+        // A: 65 -> a: 97
+        document.write(str.charCodeAt(8), '<br>');
+        document.write(String.fromCharCode(90), '<br>');
+
+        document.write(str.length, '<br>');
 
     </script>
 </body>
