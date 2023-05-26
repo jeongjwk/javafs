@@ -140,7 +140,7 @@ nav {
 #home b {
     padding: 4px 16px 8px;
     background: #002C5F;
-    border-radius: 40%;
+    border-radius: 20%;
 }
 
 /* 섹션2~4 공통 */
@@ -283,6 +283,11 @@ footer span:nth-of-type(3) {
         transform: scale(1.1);
     }
 
+    /* 섹션4 */
+    iframe {
+        height: 419px;
+    }
+
 }
 
 /* 992 이상 */
@@ -347,6 +352,11 @@ footer span:nth-of-type(3) {
 
     #event li div {
         height: 200px;
+    }
+
+    /* 섹션4 */
+    iframe {
+        height: 838px;
     }
 
 }
