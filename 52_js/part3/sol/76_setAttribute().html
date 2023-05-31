@@ -25,7 +25,7 @@
 <body>
     <button class="btn1">이미지 속성 변경하기1</button>
     <button class="btn2">이미지 속성 변경하기2</button>
-    <p class="frame"><img src="../assets/pic_1.jpg" alt="이미지1"></p>
+    <p class="frame"><img src="../../assets/pic_1.jpg" alt="이미지1"></p>
 
     <script>
         /* 
@@ -37,12 +37,12 @@
         const imgTag = document.querySelector('img');
 
         btn1.onclick = function(){
-            imgTag.setAttribute('src', '../assets/pic_1.jpg');
+            imgTag.setAttribute('src', '../../assets/pic_1.jpg');
             imgTag.setAttribute('alt', '이미지1');
         };
 
         btn2.onclick = function(){
-            imgTag.setAttribute('src', '../assets/pic_2.jpg');
+            imgTag.setAttribute('src', '../../assets/pic_2.jpg');
             imgTag.setAttribute('alt', '이미지2');
         };
 
