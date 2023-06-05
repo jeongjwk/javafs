@@ -20,7 +20,21 @@
             요소.createTextNode(텍스트) ~ 요소에 텍스트 노드 추가
             부모노드.appendChild(자식노드) ~ 부모 노드에 자식 노드 연결
         */
+        
+        const itemList = document.querySelector('#itemList');
+        const inputBox = document.querySelector('#subject');
+        const btn = document.querySelector('button');
 
+        btn.onclick = txtList;
+
+        function txtList() {
+            const item = document.createElement('li');
+            let txt = inputBox.value;
+            const itemTxt = document.createTextNode(txt);
+            itemList.appendChild(item);
+            item.appendChild(itemTxt);
+        }
+    
     </script>
 </body>
 
