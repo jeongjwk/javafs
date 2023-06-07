@@ -23,6 +23,16 @@
             e.pageY ~ 현재 문서 기준으로 이벤트가 발생한 세로 위치 반환
         */
 
+        const posX = document.querySelector('.posX');
+        const posY = document.querySelector('.posY');
+
+        window.onmousemove = function(e){
+            let x = e.pageX;
+            let y = e.pageY;
+            posX.innerText = x;
+            posY.innerText = y;
+        };
+
     </script>
 </body>
 

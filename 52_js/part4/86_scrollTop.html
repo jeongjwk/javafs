@@ -29,7 +29,12 @@
             document.querySelector('html')
             document.documentElement.scrollTop ~ 창에서 스크롤한 양 반환
         */
+        const num = document.querySelector('p');
 
+        window.onscroll = function () {
+            let scr = document.documentElement.scrollTop;
+            num.innerText = scr;
+        };
     </script>
 </body>
 
