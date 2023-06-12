@@ -36,11 +36,11 @@
     line-height: 94px;
     font-size: 1.8rem;
     font-weight: 500;
-    color: #101010;
+    color: #fff;
 }
 
 .main>li>a:hover {
-    color: #333;
+    color: #111;
 }
 
 .main>li>a::after {
@@ -51,7 +51,7 @@
     transform: scaleX(0);
     transition: .3s;
     width: 100%;
-    border: 1px solid #705b00;
+    border: 1px solid #FF4600;
     color: #ccc;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .sub a:hover {
-    color: #fdd000;
+    color: #FF4600;
 }
 
 /* 로그인/회원가입 */
