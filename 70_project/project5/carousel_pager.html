@@ -74,12 +74,12 @@
 
 <body>
     <div id="slideWrap">
-            <ul class="slider">
-                <li><img src="images/slide1.png" alt="이미지1"></li>
-                <li><img src="images/slide2.png" alt="이미지2"></li>
-                <li><img src="images/slide3.png" alt="이미지3"></li>
-                <li><img src="images/slide4.png" alt="이미지4"></li>
-            </ul>
+        <ul class="slider">
+            <li><img src="images/slide1.png" alt="이미지1"></li>
+            <li><img src="images/slide2.png" alt="이미지2"></li>
+            <li><img src="images/slide3.png" alt="이미지3"></li>
+            <li><img src="images/slide4.png" alt="이미지4"></li>
+        </ul>
 
         <ul class="pager">
             <li class="active"><a href="#">1</a></li>
@@ -92,11 +92,11 @@
 
     <script>
         const slider = $('.slider');
-        sliderItem = $('.slider').find('li'),
-        pager = $('.pager'),
-        pagerLst = $('.pager').find('li'),
-        sliderItemWidth = 100,
-        slideCount = sliderItem.length + 2;
+            sliderItem = $('.slider').find('li'),
+            pager = $('.pager'),
+            pagerLst = $('.pager').find('li'),
+            sliderItemWidth = 100,
+            slideCount = sliderItem.length + 2;
         let num = 1;
 
         // 요소의 가로 크기
