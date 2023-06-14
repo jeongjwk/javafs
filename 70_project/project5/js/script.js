@@ -23,9 +23,9 @@ $(function () {
         mode: 'fade',
         // 자동 슬라이드
         auto: true,
-        // 컨트롤 버튼(좌우, 페이저)를 클릭하면 auto 일시정지
+        // 컨트롤 버튼(좌우, 페이저)를 클릭하면 auto 일시 정지
         stopAutoOnClick: true,
-        // 슬라이드 위에 hover하면 auto 일시정지
+        // 슬라이드 위에 hover하면 auto 일시 정지
         autoHover: true,
         // 실행/일시정지 버튼
         // autoControls: true,
@@ -57,7 +57,7 @@ $(function () {
         // 페이저의 이미지 변경
         // 페이저 a태그의 active 클래스 모두 제거
         $('#slideWrap .pager a').removeClass('active');
-        // 현재 슬라이드 번호를 가져와서 current에 저장
+        // 현재 슬라이드 번호를 가져와서 currentIdx에 저장
         let currentIdx = slider.getCurrentSlide();
         $('#slideWrap .pager a').eq(currentIdx).addClass('active');
 
@@ -91,41 +91,82 @@ $(function () {
         autoPager();
         return false;
     });
-});
-// 풀페이지 레이아웃
-$('.section').mousewheel(function (e, delta) {
-    let prev;
-    if (delta > 0) {
-        prev = $(this).prev().offset().top;
-        console.log(prev);
-        $('html').stop().animate({ scrollTop: prev }, 400, 'easeOutExpo');
-    } else if (delta < 0) {
-        let next = $(this).next().offset().top;
-        console.log(next);
-        $('html').stop().animate({ scrollTop: next }, 400, 'easeOutExpo');
+
+    // 섹션2 - ???
+    const sec2 = $('#section2'),
+        btn = sec2.find('.btn'),
+        txt1 = sec2.find('.txt1'),
+        txt2 = sec2.find('.txt2');
+
+    $(window).scroll(function () {
+        let st = $(this).scrollTop();
+        let stVal = 600;
+        console.log(st);
+
+        if (st >= stVal) {
+            btn.css({ opacity: 1 });
+            txt1.css({ left: 360 + 'px' });
+            txt2.css({ left: 360 + 'px' });
+        } else {
+            btn.css({ opacity: 0 });
+            txt1.css({ left: -800 + 'px' });
+            txt2.css({ left: -400 + 'px' });
+        }
+    });
+
+    // 섹션3: 탭
+    const tabBtn = $('#section3 .thumb li'),
+        bigImg = $('#section3 .big li'),
+        txt = $('#section3 .txt li');
+
+    tabBtn.click(function () {
+        let idx = $(this).index();
+        tabBtn.removeClass('active');
+        bigImg.removeClass('active');
+        txt.removeClass('active');
+        $(this).addClass('active');
+        bigImg.eq(idx).addClass('active');
+        txt.eq(idx).addClass('active');
+    });
+    // 풀페이지 레이아웃
+    $('html').stop().animate({ scrollTop: 0 });
+
+    $('#indicator a').click(indicator);
+
+    function indicator() {
+        let idx = $(this).parent().index();
+        console.log(idx);
+        let posY = $('.section').eq(idx).offset().top;
+        $('html,body').stop().animate({ scrollTop: posY });
+        tooltip(idx);
     }
-});
 
-// 섹션2
-const sec2 = $('#section2'),
-    btn = sec2.find('.btn'),
-    txt1 = sec2.find('.txt1'),
-    txt2 = sec2.find('.txt2');
-
-$(window).scroll(function () {
-    let st = $(this).scrollTop();
-    let stVal = 600;
-    console.log(st);
-
-    if (st >= stVal) {
-        btn.css({ opacity: 1 });
-        txt1.css({ left: 360 + 'px' });
-        txt2.css({ left: 360 + 'px' });
-
-    } else {
-        btn.css({ opacity: 0 });
-        txt1.css({ left: -800 + 'px' });
-        txt2.css({ left: -400 + 'px' });
+    function tooltip(index) {
+        $('#indicator a').removeClass('on');
+        $('#indicator a').eq(index).addClass('on');
     }
-});
 
+    $('.section').mousewheel(function (e, delta) {
+        if (delta > 0) {
+            // 마우스휠을 위로 올림
+            try {
+                tooltip($(this).index() - 1);
+                let prev = $(this).prev().offset().top;
+                console.log(prev);
+                $('html').stop().animate({ scrollTop: prev });
+            } catch (err) {
+                return false;
+            }
+        } else if (delta < 0) {
+            // 마우스휠을 아래로 내림
+            try {
+                tooltip($(this).index() + 1);
+                let next = $(this).next().offset().top;
+                console.log(next);
+                $('html').stop().animate({ scrollTop: next });
+            } catch (err) {
+                return false;
+            }
+        }
+    });
+});
