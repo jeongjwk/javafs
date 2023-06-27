@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #fullpage div {
+            height: 100vh;
+        }
+
+        img {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div><img src="images/work1.jpg" alt="이미지1"></div>
+        <div><img src="images/work2.jpg" alt="이미지2"></div>
+        <div><img src="images/work3.jpg" alt="이미지3"></div>
+        <div><img src="images/work4.jpg" alt="이미지4"></div>
+        <div><img src="images/work5.jpg" alt="이미지5"></div>
+        <div><img src="images/work6.jpg" alt="이미지6"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+
+                $('img').each(function (i) {
+
+                    var bt = $(this).offset().top + $(this).outerHeight() / 5;
+                    var st = $(window).scrollTop() + $(window).height();
+
+                    if (st > bt) {
+                        $(this).animate({ 'opacity': '1' }, 700);
+                    }
+
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
